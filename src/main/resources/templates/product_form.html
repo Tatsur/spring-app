@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add product</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}"/>
+</head>
+<body>
+<script th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.bundle.min.js}"></script>
+<div class="container">
+  <form action="#" th:action="@{/product/merge}" method="post" th:object="${productDto}">
+    <input type="hidden" id="id" name="id" th:value="${productDto?.id}"/>
+    <div class="mb-3">
+      <label class="form-label" for="title">Title</label>
+      <input type="text" class="form-control" id="title" name="title" th:value="${productDto?.title}"/>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="cost" >Cost</label>
+      <input type="text" class="form-control" id="cost" name="cost" th:value="${productDto?.cost}">
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn-primary">Add</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
