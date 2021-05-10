@@ -19,12 +19,12 @@ public class ProductRepository {
 
     @PostConstruct
     public void init() {
-        products.addAll(List.of(
-                new Product(identity.incrementAndGet(), "Shoes", new BigDecimal(2500), 1, false),
-                new Product(identity.incrementAndGet(), "T-Shirt", new BigDecimal(1300), 1, false),
-                new Product(identity.incrementAndGet(), "Hat", new BigDecimal(3000), 1, false),
-                new Product(identity.incrementAndGet(), "Coat", new BigDecimal(4150), 1, false)
-        ));
+//        products.addAll(List.of(
+//                new Product(identity.incrementAndGet(), "Shoes", new BigDecimal(2500), 1, false),
+//                new Product(identity.incrementAndGet(), "T-Shirt", new BigDecimal(1300), 1, false),
+//                new Product(identity.incrementAndGet(), "Hat", new BigDecimal(3000), 1, false),
+//                new Product(identity.incrementAndGet(), "Coat", new BigDecimal(4150), 1, false)
+//        ));
     }
 
     public List<Product> findAll(){
